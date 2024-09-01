@@ -5,6 +5,7 @@ html, body {
 
 .top-section {
   height: 90vh;
+  min-width: 200px;
   background-image: url('images/reachingbot.webp');
   background-size: cover;
   background-position: 50% 50%;
@@ -102,10 +103,12 @@ html, body {
 .steps{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .box {
+  flex-grow: 1;
   margin: 5px;
-  width: 30%;
+  width: 25%;
   padding: 2.5rem;
   background-color: rgb(242, 242, 242);
   border: grey 1px black;
@@ -114,13 +117,9 @@ html, body {
 
 .box img {
   width: 40%;
-
 }
 
-.footer {
-  /* cool footer bg image from unleash */
-  background-image: 
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
+.box li {
+  margin: 10px;
+  list-style-type: circle;
 }
