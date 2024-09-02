@@ -3,6 +3,10 @@ html, body {
   margin: 0;
 }
 
+.container {
+  display: grid;
+}
+
 .top-section {
   height: 90vh;
   min-width: 200px;
@@ -104,6 +108,7 @@ html, body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .box {
   flex-grow: 1;
@@ -122,4 +127,9 @@ html, body {
 .box li {
   margin: 10px;
   list-style-type: circle;
+}
+
+footer {
+  margin-left: 15%;
+  margin-right: 15%;
 }
