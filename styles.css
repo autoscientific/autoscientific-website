@@ -5,11 +5,12 @@ html, body {
 
 .container {
   display: grid;
+  grid-template-rows: repeat(2, auto) 300px;
+  row-gap: 10px;
 }
 
-.top-section {
-  height: 90vh;
-  min-width: 200px;
+header {
+  height: 80vh;
   background-image: url('images/reachingbot.webp');
   background-size: cover;
   background-position: 50% 50%;
@@ -17,7 +18,7 @@ html, body {
 } 
 
 .nav-bar {
-  width: 70%;
+  width: 60%;
   position: fixed;
   display: flex;
   align-items: center;
@@ -61,12 +62,12 @@ html, body {
 }
 
 .more-info {
+  position: absolute;
   width: 30%;
   padding: 1.5rem;
-  position: relative;
   color: #fff;
-  top: 50%;
   margin-left: 15%;
+  top: 40%;
   /* slightly transparent bg colour */
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -96,6 +97,24 @@ html, body {
   ); /* Slightly increase background visibility */
 }
 
+@media screen and (max-width: 938px) {
+  .more-info {
+    position: unset;
+    background-color: #8c8c8c;
+    color: #fff;
+    margin-left: unset;
+    text-align: center;
+    width: unset;
+    justify-content: space-between;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+}
+
 .mid-section {
   margin-left: 15%;
   margin-right: 15%;
@@ -117,7 +136,6 @@ html, body {
   padding: 2.5rem;
   background-color: rgb(242, 242, 242);
   border: grey 1px black;
-  min-width: 250px;
 }
 
 .box img {
@@ -130,6 +148,10 @@ html, body {
 }
 
 footer {
+  background-color: lightgray;
+}
+
+.footer-content {
   margin-left: 15%;
   margin-right: 15%;
 }
