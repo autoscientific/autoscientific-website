@@ -97,15 +97,43 @@ header {
   ); /* Slightly increase background visibility */
 }
 
+.more-info-small {
+  display: none;
+}
+
 @media screen and (max-width: 938px) {
   .more-info {
-    position: unset;
-    background-color: #8c8c8c;
-    color: #fff;
-    margin-left: unset;
+    display: none;
+  }
+  .more-info-small {
+    display: block;
+    margin-top: -20px;
+    padding: 3rem;
+    color:#fff;
     text-align: center;
-    width: unset;
-    justify-content: space-between;
+    background-color: rgb(193, 193, 193);
+  }
+  .more-info-small a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    border: 2px solid hsl(0, 0%, 67%); /* Start with a transparent border */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: border 0.3s, padding 0.3s; /* Smooth transition for border and padding */
+  }
+  
+  .more-info-small a:hover {
+    border: 2px solid #fff; /* Change to a solid white border on hover */
+    /* padding: 8px 18px; Reduce padding to compensate for the thicker border */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.2
+    ); /* Slightly increase background visibility */
   }
   header {
     display: flex;
