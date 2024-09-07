@@ -18,12 +18,12 @@ header {
 } 
 
 .nav-bar {
-  width: 60%;
+  width: 100%;
   position: fixed;
   display: flex;
   align-items: center;
-  margin-left: 15%;
-  margin-right: 15%;
+  transition: background-color 0.2s;
+  z-index: 99999;
 }
 
 .top-right-nav {
@@ -51,7 +51,7 @@ header {
 }
 
 .logo {
-  margin-left: 5%;
+  margin-left: 15%;
   margin-right: 2rem;
   color: #fff;
 }
@@ -209,6 +209,11 @@ footer {
 }
 
 @media screen and (max-width: 938px) {
+  .footer-content {
+    grid-template-rows: 1fr;
+    grid-template-columns: unset;
+    row-gap: 20px;
+  }
   .nick {
     flex-direction: column;
     border-bottom: 1.5px dashed hsl(0, 0%, 48%);
