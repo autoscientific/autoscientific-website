@@ -1,6 +1,14 @@
+@font-face {
+  font-family: 'questrialregular';
+  src: url("fonts/questrial/questrial-regular-webfont.woff2") format('woff2'),
+       url("fonts/questrial/questrial-regular-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body {
-  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  font-family: "questrialregular";
 }
 
 .container {
@@ -11,7 +19,7 @@ html, body {
 
 header {
   height: 80vh;
-  background-image: url('images/reachingbot.webp');
+  background-image: url("../images/reachingbot.webp");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -116,7 +124,6 @@ header {
   justify-content: space-evenly;
 }
 .box {
-  flex-grow: 1;
   margin: 5px;
   padding: 2.5rem;
   background-color: rgb(242, 242, 242);
@@ -133,15 +140,90 @@ header {
 }
 
 footer {
-  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-footer {
+  border-top: hsl(0, 0%, 92%)  1px solid;
+  border-bottom: hsl(0, 0%, 92%)  1px solid;
 }
 
 .footer-content {
+  font-size: 1.1rem;
   margin-left: 15%;
   margin-right: 15%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.bottom-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.bottom-right img {
+  width: 20px;
+  margin: 5px;
+}
+
+.bottom-footer {
+  text-align: center;
+  padding: 3rem;
+}
+
+.email-form {
+  border: 2px solid hwb(0 0% 100%);
+  padding: 0.8rem;
+  width: 300px;
+}
+
+.email-form:hover {
+  background-color: hwb(0 88% 12%);
+} 
+
+.nick-img {
+  border: 0.8rem solid rgb(183, 243, 192);
+  width: 200px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.inssia-img {
+  border: 0.8rem solid rgb(176, 169, 235);
+  width: 200px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.quote-start {
+  width: 30px;
+  margin-right: 10px;
+  transform: rotate(180deg);
+}
+
+.quote-end {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.nick, .inssia {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @media screen and (max-width: 938px) {
+  .nick {
+    flex-direction: column;
+    border-bottom: 1.5px dashed hsl(0, 0%, 48%);
+  }
+  .inssia {
+    flex-direction: column-reverse;
+  }
   .more-info {
     display: none;
   }
