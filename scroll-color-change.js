@@ -2,7 +2,7 @@ var buttonLinks = document.querySelectorAll('.button a');
 var logo = document.querySelector('.logo');
 
 window.addEventListener('scroll', function() {
-    var navBar = document.getElementById('nav-bar');
+    var navBar = document.getElementById('nav-bar-container');
     var textColor = window.scrollY > 100 ? 'black' : 'white';
     var backgroundColor = window.scrollY > 100 ? 'white' : 'transparent';
 
