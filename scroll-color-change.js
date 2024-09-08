@@ -1,10 +1,16 @@
 var buttonLinks = document.querySelectorAll('.button a');
 var logo = document.querySelector('.logo');
+var searchIcon = document.getElementById('search-icon');
+var navBar = document.getElementById('nav-bar-container');
 
 window.addEventListener('scroll', function() {
-    var navBar = document.getElementById('nav-bar-container');
     var textColor = window.scrollY > 100 ? 'black' : 'white';
     var backgroundColor = window.scrollY > 100 ? 'white' : 'transparent';
+    var inversion = window.scrollY > 100 ? 'invert(100%)' : 'invert(0)';
+
+    if (searchIcon) {
+        searchIcon.style.filter = inversion;
+    }
 
     if (navBar) {
         navBar.style.color = textColor;
