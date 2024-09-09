@@ -17,14 +17,14 @@ header {
   background-repeat: no-repeat;
 } 
 
-.nav-bar-container {
+#nav-bar-container {
   width: 100%;
   transition: background-color 0.2s;
   position: fixed;
   z-index: 99999;
 }
 
-.nav-bar {
+#nav-bar {
   margin-left: 15%;
   margin-right: 15%;
   display: flex;
