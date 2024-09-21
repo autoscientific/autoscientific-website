@@ -6,6 +6,10 @@
     <title>autoscientific</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="icon" type="image/x-icon" href="../images/pattern.png" />
   </head>
   <body>
@@ -14,7 +18,7 @@
         <div id="nav-bar-container">
           <nav id="nav-bar">
             <div class="logo">
-              <h2>
+              <h2 class="animate__animated animate__pulse">
                 auto<b><i>s</i>cientific</b>
               </h2>
             </div>
@@ -47,7 +51,6 @@
           <a href="#">Explore</a>
         </div>
       </header>
-
       <main>
         <div class="more-info-small">
           <h2>
@@ -60,100 +63,90 @@
           <a href="#">Explore</a>
         </div>
         <div class="mid-section">
-          <h2>Our 3-step process to automating your lab</h2>
-          <div class="steps">
-            <div class="box">
-              <img
-                src="../images/idea.png"
-                alt="An icon depicting a cartoon hand holding out a lightbulb"
-              />
-              <h4>Step 1</h4>
-              <ul>
-                <li>Understanding your workflows</li>
-                <li>Conceptualising and designing solutions</li>
-                <li>Working together to find an optimal solution</li>
-              </ul>
-            </div>
-            <div class="box">
-              <img
-                src="../images/industrial-robot.png"
-                alt="An icon depicting a cartoon robotic arm"
-              />
-              <h4>Step 2</h4>
-              <ul>
-                <li>Making adjustments given your feedback</li>
-                <li>Deploying hardware and/or software</li>
-                <li>Validating the workflow</li>
-                <li>Training your team</li>
-              </ul>
-            </div>
-            <div class="box">
-              <img
-                src="../images/checklist.png"
-                alt="An icon depicting a cartoon clipboard with a checklist"
-              />
-              <h4>Step 3</h4>
-              <ul>
-                <li>Keeping track of performance</li>
-                <li>Integrating new hardware</li>
-                <li>Supporting your ongoing success</li>
-              </ul>
-            </div>
-          </div>
+          <h2>What our customers say...</h2>
           <div class="testimonials">
-            <h2>What our customers say</h2>
-            <div class="nick">
+            <article class="nick">
               <img class="nick-img" src="images/Nicholas-James-BW.jpg" alt="" />
               <div class="nick-content">
+                <h2>Dr. Nicholas James</h2>
                 <p>
-                  <img
-                    class="quote-start"
-                    src="../images/quote.png"
-                    alt="quote"
-                  />We have been using ReachingBots from Autoscientific for 6
-                  months now and they have rapidly become an invaluable addition
-                  to the lab. As we do a large number of upper limb studies in
-                  mice, ReachingBots have already saved us hundreds (if not
-                  thousands) of hours in terms of training, rehabilitating, and
-                  assessing skilled upper limb function.
-                  <img
-                    class="quote-end"
-                    src="../images/quote.png"
-                    alt="quote"
-                  />
+                  We have been using ReachingBots from auto<b
+                    ><i>s</i>cientific</b
+                  >
+                  for 6 months now and they have rapidly become an invaluable
+                  addition to the lab...
                 </p>
-                <h2>Dr. Nicholas James, Research Scientist - EPFL</h2>
               </div>
-            </div>
-            <div class="inssia">
-              <div class="inssia-content">
-                <p>
-                  <img
-                    class="quote-start"
-                    src="../images/quote.png"
-                    alt="quote"
-                  />
-                  I really enjoyed working closely with Autoscientific to have
-                  ReachingBots customised to our specific needs. This, along
-                  with the immediate response to any requests for help,
-                  illustrates perfectly the exceptional customer service we have
-                  received since before having even placed our order. As of yet,
-                  no request or problem has ever been too much to ask or too
-                  difficult to solve
-                  <img
-                    class="quote-end"
-                    src="../images/quote.png"
-                    alt="quote"
-                  />
-                </p>
-                <h2>Inssia Dewany, Research Scientist - .NeuroRestore</h2>
-              </div>
+              <a class="testimonials-more" href="#"
+                >Read more
+                <img
+                  class="right-arrow"
+                  src="images/arrow-small-right.svg"
+                  alt=""
+              /></a>
+            </article>
+            <article class="inssia">
               <img
                 class="inssia-img"
                 src="images/Inssia-Dewany-BW.jpg"
                 alt=""
               />
-            </div>
+              <div class="inssia-content">
+                <h2>Inssia Dewany</h2>
+                <p>
+                  I really enjoyed working closely with auto<b
+                    ><i>s</i>cientific</b
+                  >
+                  to have ReachingBots customised to our specific needs...
+                </p>
+              </div>
+              <a class="testimonials-more" href="#"
+                >Read more
+                <img
+                  class="right-arrow"
+                  src="images/arrow-small-right.svg"
+                  alt=""
+              /></a>
+            </article>
+          </div>
+          <div class="mid-section-contact-us">
+            <!-- formspree.io/forms -->
+            <form class="get-in-touch" action="#" method="POST">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Ada Lovelace"
+                  name="name"
+                  required
+                  maxlength="50"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email-us">Email</label>
+                <input
+                  id="email-us"
+                  type="email"
+                  name="email"
+                  placeholder="ada@lovelace.com"
+                  required
+                  maxlength="100"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  placeholder="Tell us about your lab and how we can help"
+                  name="message"
+                  required
+                  maxlength="500"
+                ></textarea>
+              </div>
+              <button type="submit">Send</button>
+              <button type="reset">Clear</button>
+            </form>
           </div>
         </div>
       </main>

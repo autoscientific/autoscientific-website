@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #7a66f0;
+  --secondary-color: #fff;
+  --tertiary-color: #f6f8ff;
+  --quaternary-color: #fff7f3;
+  --border-radius: 1rem;
+}
+
 html, body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -9,13 +17,18 @@ html, body {
   row-gap: 10px;
 }
 
+h2 {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
 header {
   height: 80vh;
   background-image: url("../images/reachingbot.webp");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-} 
+}
 
 #nav-bar-container {
   width: 100%;
@@ -25,10 +38,10 @@ header {
 }
 
 #nav-bar {
+  align-items: center;
+  display: flex;
   margin-left: 15%;
   margin-right: 15%;
-  display: flex;
-  align-items: center;
 }
 
 .top-right-nav {
@@ -37,61 +50,61 @@ header {
 
 .top-right-nav img {
   width: 20px;
-  transition : width 0.1s;
+  transition : transform 0.1s;
 }
 
-.top-right-nav img:hover {
-  width: 25px;
+.top-right-nav img:hover, img:focus {
+  transform: scale(1.2);
 }
 
 .button a{
+  color: var(--secondary-color);
   margin: 5px;
   text-decoration: none;
-  color: #fff;
 }
 
-.button a:hover {
+.button a:hover, a:focus {
   /* underline */
   text-decoration: underline;
 }
 
 .logo {
   margin-right: 2rem;
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 .logo h2 {
   font-weight: lighter;
-  letter-spacing: 0.05rem;
+  letter-spacing: 2px;
 }
 
 .more-info {
-  position: absolute;
-  width: 30%;
-  padding: 1.5rem;
-  color: #fff;
-  margin-left: 15%;
-  top: 40%;
   /* slightly transparent bg colour */
   background-color: rgba(0, 0, 0, 0.1);
+  color: var(--secondary-color);
+  margin-left: 15%;
+  padding: 1.5rem;
+  position: absolute;
+  top: 40%;
+  width: 30%;
 }
 .more-info h2 {
   font-weight: lighter;
 }
 .more-info a {
+  border-radius: var(--border-radius);
+  border: 2px solid hsl(0, 0%, 67%); /* Start with a transparent border */
+  color: hsl(0, 0%, 100%);
   display: inline-block;
+  font-weight: bold;
   margin-top: 10px;
   padding: 10px 20px;
-  color: hsl(0, 0%, 100%);
   text-decoration: none;
-  border: 2px solid hsl(0, 0%, 67%); /* Start with a transparent border */
-  border-radius: 5px;
-  font-weight: bold;
   transition: border 0.3s, padding 0.3s; /* Smooth transition for border and padding */
 }
 
-.more-info a:hover {
-  border: 2px solid #fff; /* Change to a solid white border on hover */
+.more-info a:hover, a:focus {
+  border: 2px solid var(--secondary-color); /* Change to a solid white border on hover */
   /* padding: 8px 18px; Reduce padding to compensate for the thicker border */
   background-color: rgba(
     255,
@@ -110,9 +123,6 @@ header {
   margin-right: 15%;
 }
 
-.mid-section h2 {
-  font-weight: lighter;
-}
 .steps{
   display: flex;
   flex-direction: row;
@@ -121,18 +131,78 @@ header {
 }
 .box {
   margin: 5px;
-  padding: 2.5rem;
   background-color: rgb(242, 242, 242);
-  border: grey 1px black;
+  padding-bottom: 1rem;
+  border-radius: var(--border-radius);
+  /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1); */
+  background-color: rgba(167, 167, 167, 0.1);
+}
+
+.box h4 {
+  margin-left: 1rem;
+  font-size: 1.5rem;
 }
 
 .box img {
+  padding: 2.5rem;
   width: 40%;
 }
 
 .box li {
-  margin: 10px;
+  margin: 0.7rem;
   list-style-type: circle;
+  font-size: 1.2rem;
+}
+
+.get-in-touch {
+  border: 3px solid rgb(224, 224, 224);
+  padding: 1rem 2rem;
+  margin: 20px 20% 40px;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 19px 40px -10px #d1d7fc;
+}
+
+.get-in-touch label {
+  display: block;
+  font-weight: bolder;
+  color: var(--primary-color);
+}
+
+input, textarea {
+  outline: none;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid hsl(0, 0%, 67%);
+  box-shadow: 0px 19px 40px -10px #d1d7fc;
+  transition: outline 0.3s, box-shadow 0.3s;
+}
+
+
+input:focus, textarea:focus {
+  outline: 2px solid rgb(125, 6, 176);
+  box-shadow: 0px 19px 40px -10px #d1d7fc;
+}
+
+.get-in-touch textarea {
+  height: 100px;
+  resize: none;
+  width: -webkit-fill-available;
+  }
+
+.get-in-touch button {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: var(--border-radius);
+  border: 1px solid hsl(0, 0%, 67%);
+  box-shadow: 0px 19px 40px -10px #d1d7fc;
+  margin: 0.5rem;
+  padding: 0.5rem 2rem;
+  transition: background-color 0.3s, box-shadow 0.3s; 
+}
+
+.get-in-touch button:hover, .get-in-touch button:focus{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  box-shadow: 0px 19px 40px -200px #d1d7fc;
 }
 
 footer {
@@ -157,59 +227,93 @@ footer {
 .bottom-right {
   display: flex;
   justify-content: flex-end;
-  align-items: end;
+  align-items: end
 }
 
 .bottom-right img {
-  width: 20px;
-  margin: 5px;
+  width: 1.5rem;
+  margin: 0 0.5rem;
 }
 
 .bottom-footer {
   text-align: center;
   padding: 3rem;
+  font-weight: lighter;
+  letter-spacing: 2px;
 }
 
 .email-form {
-  border: 2px solid hwb(0 0% 100%);
   padding: 0.8rem;
-  width: 300px;
+  width: 50%;
 }
 
-.email-form:hover {
-  background-color: hwb(0 88% 12%);
-} 
+.testimonials {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-basis: 0;
+}
 
-.nick-img {
-  border: 0.8rem solid rgb(183, 243, 192);
-  width: 200px;
+.testimonials img {
+  width: 30%;
   border-radius: 50%;
-  margin: 20px;
-}
-
-.inssia-img {
-  border: 0.8rem solid rgb(176, 169, 235);
-  width: 200px;
-  border-radius: 50%;
-  margin: 20px;
-}
-
-.quote-start {
-  width: 30px;
-  margin-right: 10px;
-  transform: rotate(180deg);
-}
-
-.quote-end {
-  width: 30px;
-  margin-left: 10px;
 }
 
 .nick, .inssia {
+  width: 50%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.nick h2, .inssia h2 {
+  font-weight: lighter  ;
+  margin-bottom: -0.8rem;
+}
+
+.nick {
+  background: linear-gradient(to bottom, transparent 30%, var(--quaternary-color) 30%);
+}
+
+.inssia {
+  background: linear-gradient(to bottom, transparent 30%, var(--tertiary-color) 30%);
+}
+
+.nick a, .inssia a {
+  color: var(--primary-color);
+  box-shadow: 0px 19px 40px -10px #d1d7fc;
+  text-decoration: none;
+  font-size: 1.2rem;
+  background: var(--secondary-color);
+  border-radius: var(--border-radius);
+  padding: 0.9rem;
+  margin-top: 2rem;
+}
+
+.testimonials-more {
+    display: inline-flex;
+}
+
+.nick a:hover, .inssia a:hover {
+  box-shadow: 5px 5px 20px -10px #d1d7fc;
+}
+
+.nick:last-child, .inssia:last-child {
+  /* push to the bottom */
+  margin-top: auto;
+  justify-content: flex-end;
+}
+
+.nick .right-arrow, .inssia .right-arrow {
+  margin-left: 0.5rem;
+  width: 1.2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 938px) {
@@ -218,13 +322,7 @@ footer {
     grid-template-columns: unset;
     row-gap: 20px;
   }
-  .nick {
-    flex-direction: column;
-    border-bottom: 1.5px dashed hsl(0, 0%, 48%);
-  }
-  .inssia {
-    flex-direction: column-reverse;
-  }
+
   .more-info {
     display: none;
   }
@@ -232,7 +330,7 @@ footer {
     display: block;
     margin-top: -20px;
     padding: 3rem;
-    color:#fff;
+    color:var(--secondary-color);
     text-align: center;
     background-color: rgb(193, 193, 193);
   }
@@ -243,13 +341,13 @@ footer {
     color: hsl(0, 0%, 100%);
     text-decoration: none;
     border: 2px solid hsl(0, 0%, 67%); /* Start with a transparent border */
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     font-weight: bold;
     transition: border 0.3s, padding 0.3s; /* Smooth transition for border and padding */
   }
   
-  .more-info-small a:hover {
-    border: 2px solid #fff; /* Change to a solid white border on hover */
+  .more-info-small a:hover, a:focus {
+    border: 2px solid var(--secondary-color); /* Change to a solid white border on hover */
     /* padding: 8px 18px; Reduce padding to compensate for the thicker border */
     background-color: rgba(
       255,
@@ -265,6 +363,23 @@ footer {
   }
   .steps {
     flex-direction: column;
+  }
+
+  .bottom-right {
+    padding-top: 1rem;
+    justify-content: flex-start;
+  }
+
+  .testimonials {
+    flex-direction: column;
+  }
+
+  .nick, .inssia {
+    width: unset;
+  }
+
+  .get-in-touch {
+    margin: 20px 5%;
   }
 
 }
