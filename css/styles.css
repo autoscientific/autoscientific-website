@@ -35,13 +35,25 @@ header {
   background-repeat: no-repeat;
 }
 
+.logo>a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.logo>a:active, .logo>a:visited, .logo>a:focus {
+  text-decoration: none;
+}
+
 #menu-toggle {
   width: 40px;
   height: 40px;
   transition: transform 0.3s;
   /* inverted by default */
-  border: solid 2px black;
+  filter: invert(1);
+  border: solid 1px black;
+  
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .nav-bar-container {
@@ -59,7 +71,7 @@ header {
 }
 
 #menu-toggle:hover, #menu-toggle:focus {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .nav__item>a{
