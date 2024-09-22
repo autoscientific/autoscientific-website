@@ -15,32 +15,30 @@
   <body>
     <div class="container">
       <header>
-        <div id="nav-bar-container">
+        <div class="nav-bar-container">
           <nav id="nav-bar-standard">
             <div class="logo">
               <h2 class="animate__animated animate__pulse">
                 auto<b><i>s</i>cientific</b>
               </h2>
             </div>
-            <div class="button">
-              <a href="#">Home</a>
-              <a href="#">About</a>
-              <a href="#"
-                >auto<b><i>s</i>cientific</b> ReachingBot ®</a
-              >
-            </div>
-            <div class="top-right-nav">
-              <a href="#">
-                <img
-                  src="../images/search-interface-symbol.png"
-                  alt="A search icon"
-                  id="search-icon"
-                />
-              </a>
-            </div>
+            <img
+              id="menu-toggle"
+              src="images/burger-bar.svg"
+              alt="Menu Toggle"
+            />
+            <ul class="list nav__list">
+              <li class="nav__item"><a href="#">Home</a></li>
+              <li class="nav__item"><a href="#">About</a></li>
+              <li class="nav__item">
+                <a href="#"
+                  >auto<b><i>s</i>cientific</b> ReachingBot ®</a
+                >
+              </li>
+            </ul>
           </nav>
         </div>
-        <div class="more-info">
+        <article class="more-info">
           <h2>
             Introducing the new auto<b><i>s</i>cientific</b> ReachingBot®
           </h2>
@@ -49,7 +47,7 @@
             artificial intelligence.
           </p>
           <a href="#">Explore</a>
-        </div>
+        </article>
       </header>
       <main>
         <div class="more-info-small">
@@ -66,7 +64,11 @@
           <h2>What our customers say...</h2>
           <div class="testimonials">
             <article class="nick">
-              <img class="nick-img" src="images/Nicholas-James-BW.jpg" alt="" />
+              <img
+                class="nick-img"
+                src="images/Nicholas-James-BW.jpg"
+                alt="Dr. Nicholas James"
+              />
               <div class="nick-content">
                 <h2>Dr. Nicholas James</h2>
                 <p>
@@ -77,19 +79,20 @@
                   addition to the lab...
                 </p>
               </div>
-              <a class="testimonials-more" href="#"
-                >Read more
+              <a class="testimonials-more" href="#">
+                Read more
                 <img
                   class="right-arrow"
                   src="images/arrow-small-right.svg"
-                  alt=""
-              /></a>
+                  alt="Read More"
+                />
+              </a>
             </article>
             <article class="inssia">
               <img
                 class="inssia-img"
                 src="images/Inssia-Dewany-BW.jpg"
-                alt=""
+                alt="Inssia Dewany"
               />
               <div class="inssia-content">
                 <h2>Inssia Dewany</h2>
@@ -100,17 +103,17 @@
                   to have ReachingBots customised to our specific needs...
                 </p>
               </div>
-              <a class="testimonials-more" href="#"
-                >Read more
+              <a class="testimonials-more" href="#">
+                Read more
                 <img
                   class="right-arrow"
                   src="images/arrow-small-right.svg"
-                  alt=""
-              /></a>
+                  alt="Read More"
+                />
+              </a>
             </article>
           </div>
           <div class="mid-section-contact-us">
-            <!-- formspree.io/forms -->
             <form class="get-in-touch" action="#" method="POST">
               <div class="form-group">
                 <label for="name">Name</label>
@@ -150,7 +153,6 @@
           </div>
         </div>
       </main>
-
       <footer>
         <div class="top-footer">
           <div class="footer-content">
@@ -173,7 +175,6 @@
               </form>
             </div>
             <div class="footer-box bottom-right">
-              <!-- TODO: generate actual links -->
               <a href="#"
                 ><img src="../images/instagram.png" alt="Instagram icon"
               /></a>
@@ -196,6 +197,7 @@
         </div>
       </footer>
     </div>
-    <script src="scroll-color-change.js"></script>
+    <script src="js/scroll-color-change.js"></script>
+    <script src="js/menu-toggle.js"></script>
   </body>
 </html>

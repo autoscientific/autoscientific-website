@@ -22,6 +22,11 @@ h2 {
   font-weight: 400;
 }
 
+.list {
+  list-style-type: none;
+  width: 100%;
+}
+
 header {
   height: 100vh;
   background-image: url("../images/reachingbot.webp");
@@ -30,40 +35,32 @@ header {
   background-repeat: no-repeat;
 }
 
-#nav-bar-container {
-  width: 100%;
-  transition: background-color 0.2s;
-  position: fixed;
-  z-index: 99999;
+#menu-toggle {
+  width: 40px;
+  transition: transform 0.3s;
 }
 
 #nav-bar-standard {
-  align-items: center;
+  width: 100%;
+  position: fixed;
   display: flex;
-  margin-left: 15%;
-  margin-right: 15%;
+  justify-content: space-between;
+  transition: background-color 0.2s;
+  z-index: 99999;
+  flex-wrap: wrap;
 }
 
-.top-right-nav {
-  margin-left: auto;
-}
-
-.top-right-nav img {
-  width: 20px;
-  transition : transform 0.1s;
-}
-
-.top-right-nav img:hover, img:focus {
+#menu-toggle:hover, #menu-toggle:focus {
   transform: scale(1.2);
 }
 
-.button a{
+.nav__item>a{
   color: var(--secondary-color);
   margin: 5px;
   text-decoration: none;
 }
 
-.button a:hover, a:focus {
+.nav__item>a:hover, a:focus {
   /* underline */
   text-decoration: underline;
 }
