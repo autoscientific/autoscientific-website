@@ -75,13 +75,14 @@ header {
 #menu-toggle {
   width: 40px;
   height: 40px;
-  transition: transform 0.3s;
+  transition: all 0.3s;
   filter: invert(1);
   cursor: pointer;
 }
 
 #menu-toggle:hover, #menu-toggle:focus {
-  transform: scale(1.05);
+  background-color: rgba(166, 61, 61, 0.2);
+  border-radius: 50%;
 }
 
 .nav__list {
@@ -370,7 +371,7 @@ footer {
 }
 
 /* Media Queries */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 938px) {
   #menu-toggle {
     display: none;
   }
