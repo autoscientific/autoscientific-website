@@ -59,19 +59,28 @@ header {
 .nav-bar-container {
   width: 100%;
   position: fixed;
+  z-index: 99999;
 }
 
 #nav-bar-standard {
   display: flex;
   justify-content: space-between;
   transition: background-color 0.2s;
-  z-index: 99999;
   padding: 1rem;
   flex-wrap: wrap;
 }
 
 #menu-toggle:hover, #menu-toggle:focus {
   transform: scale(1.05);
+}
+
+.nav__list {
+  padding: 0;
+}
+
+.nav__item {
+  border-bottom: solid 0.5px var(--secondary-color);
+  padding: 0.5rem;
 }
 
 .nav__item>a{
