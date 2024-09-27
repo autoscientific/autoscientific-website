@@ -126,6 +126,20 @@ header {
   transform: scale(0.9, 1.5);
 }
 
+/* Client logos */
+.client-logos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+  margin: 3rem;
+}
+
+.client-logos img {
+  width: 100px;
+  filter: grayscale(90%);
+}
 /* More Info Section */
 .more-info {
   background-color: rgba(0, 0, 0, 0.1);
