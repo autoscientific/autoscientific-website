@@ -139,6 +139,7 @@ header {
 .client-logos img {
   width: 100px;
   filter: grayscale(90%);
+  opacity: 0;
 }
 /* More Info Section */
 .more-info {
