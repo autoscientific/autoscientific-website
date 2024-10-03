@@ -3,11 +3,6 @@ const parentElement = document.querySelector('.client-logos');
 // list child elements
 const childElements = Array.from(parentElement.children);
 
-console.log(childElements[0]);
-
-// get the first child element to apply styles
-const firstChild = childElements[0];
-
 // get the xy position of the first child element
 const firstChildPosition = firstChild.getBoundingClientRect();
 
