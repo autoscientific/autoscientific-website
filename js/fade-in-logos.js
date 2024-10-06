@@ -3,25 +3,20 @@ const parentElement = document.querySelector('.client-logos');
 // list child elements
 const childElements = Array.from(parentElement.children);
 
-// get the xy position of the first child element
-const firstChildPosition = firstChild.getBoundingClientRect();
 
 function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
   }
 
 function fadeInElement(element, fadeTime) {
-    for (let i = 0; i <= 100; i++) {
-        setTimeout(() => {
-            element.style.opacity = i / 100;
-        }, i * fadeTime); // multiply delay by i to increment the delay
-    }
+    element.style.opacity = 1;
+    element.style.transition = `opacity ${fadeTime}s`;
 };
 
 // fade in each child element
 function fadeInAll() {
     childElements.forEach((element) => {
-        let randomTime = getRandomArbitrary(5, 20);
+        let randomTime = getRandomArbitrary(1, 3);
         let randomDelay = getRandomArbitrary(100, 1000);
         setTimeout(() => {
             fadeInElement(element, randomTime);
@@ -29,16 +24,29 @@ function fadeInAll() {
     });
 };
 
-let fadeHappened = false;
-
-
+const firstChildPosition = Math.round(childElements[0].getBoundingClientRect().top);
 window.addEventListener('scroll', function() {
     // get vertical window size
-    let windowSize = window.innerHeight;
-    let positionQuery = window.scrollY + windowSize;
+    // get the xy position of the first child element
+    
+    let fadeHappened = false;
+    let positionQuery = Math.round(window.scrollY);
+    console.log(positionQuery, firstChildPosition);
 
-    if (positionQuery > firstChildPosition.top && !fadeHappened) {
+    if ((positionQuery == firstChildPosition) && !fadeHappened) {
         fadeInAll();
         fadeHappened = true;
     }
+    else {
+        console.log('nope');
+    }
+
+    // if (positionQuery < firstChildPosition.top && fadeHappened) {
+    //     console.log('reset');
+    //     fadeHappened = false;
+    //     childElements.forEach((element) => {
+    //         element.style.opacity = 0;
+    //     });
+
+    // }
 });
