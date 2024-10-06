@@ -139,7 +139,6 @@ header {
 .client-logos img {
   width: 100px;
   filter: grayscale(90%);
-  opacity: 0;
 }
 /* More Info Section */
 .more-info {
@@ -176,6 +175,29 @@ header {
 
 .more-info-small {
   display: none;
+}
+
+/* fade in styles */
+.tile {
+  -webkit-transform: translateY(50px) rotate(-5deg) translateZ(0);
+  transform: translateY(50px) rotate(-5deg) translateZ(0);
+  -webkit-transition-delay: .3s;
+  -o-transition-delay: .3s;
+  transition-delay: .3s;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  opacity: 0;
+}
+.bottom-right-fade.inView {
+  opacity: 1;
+  -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
+  transform: translateY(0px) rotate(0deg) translateZ(0);
+}
+.inView {
+  opacity: 1;
+  -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
+  transform: translateY(0px) rotate(0deg) translateZ(0);
 }
 
 /* Mid Section Styles */
