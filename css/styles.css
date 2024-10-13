@@ -27,9 +27,19 @@ h2 {
 }
 
 /* Header Styles */
-header {
+.header-home {
   height: 100vh;
   background-image: url("../images/reachingbot.webp");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* Header Styles Non-home*/
+.header-non-home {
+  height: 50vh;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,74,1) 31%, rgba(0,212,255,1) 100%); 
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
