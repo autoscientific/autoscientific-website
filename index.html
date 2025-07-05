@@ -31,7 +31,8 @@
 
     <title>autoscientific - ReachingBot® for Automated Neuroscience Research</title>
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tailwind-minimal.css" />
+    <link rel="stylesheet" href="css/custom.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -89,13 +90,13 @@
     </script>
   </head>
   <body>
-    <div class="container">
-      <header class="header-home">
-        <div class="nav-bar-container collapsible">
-          <nav id="nav-bar-standard">
-            <div class="logo">
-              <a href="">
-                <h2 class="animate__animated animate__pulse">
+    <div class="grid grid-rows-[auto_auto_300px] gap-y-2.5">
+      <header class="h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-between relative" style="background-image: url('images/reachingbot.webp')">
+        <div class="w-full fixed z-[99999] nav-bar-container collapsible">
+          <nav class="flex justify-between items-center transition-colors duration-200 px-4 pt-0 flex-wrap" id="nav-bar-standard">
+            <div class="mr-8 text-white logo">
+              <a href="" class="text-white no-underline">
+                <h2 class="animate__animated animate__pulse font-light tracking-[2px] text-[1.7rem] font-normal">
                   auto<b><i>s</i>cientific</b>
                 </h2>
               </a>
@@ -104,66 +105,67 @@
               id="menu-toggle"
               src="images/burger-bar.svg"
               alt="Menu Toggle"
+              class="w-[30px] h-[30px] transition-all duration-300 invert cursor-pointer hover:scale-110 focus:scale-110"
             />
-            <ul class="list nav__list collapsible__content">
-              <li class="nav__item"><a href="#">Home</a></li>
-              <li class="nav__item"><a href="about.html">About</a></li>
-              <li class="nav__item">
-                <a href="#"
+            <ul class="list-none p-0 m-0 w-full nav__list collapsible__content max-h-0 overflow-hidden opacity-0 transition-all duration-200">
+              <li class="border-b border-gray-400 border-opacity-20 p-0.5 nav__item"><a href="#" class="text-white mx-1.5 no-underline hover:underline focus:underline">Home</a></li>
+              <li class="border-b border-gray-400 border-opacity-20 p-0.5 nav__item"><a href="about.html" class="text-white mx-1.5 no-underline hover:underline focus:underline">About</a></li>
+              <li class="border-b border-gray-400 border-opacity-20 p-0.5 nav__item">
+                <a href="#" class="text-white mx-1.5 no-underline hover:underline focus:underline"
                   >auto<b><i>s</i>cientific</b> ReachingBot ®</a
                 >
               </li>
             </ul>
           </nav>
         </div>
-        <article class="more-info">
-          <h2>
+        <article class="bg-black bg-opacity-10 rounded-custom text-white ml-[15%] p-6 absolute top-[40%] w-[30%] hidden lg:block more-info">
+          <h2 class="font-light text-[1.7rem] font-normal mb-4">
             Introducing the new auto<b><i>s</i>cientific</b> ReachingBot®
           </h2>
-          <p>
+          <p class="mb-4">
             Accelerating preclinical drug evaluation with robotics and
             artificial intelligence.
           </p>
-          <a href="#">Explore</a>
+          <a href="#" class="inline-block font-bold mt-2.5 py-2.5 px-5 no-underline transition-all duration-300 rounded-custom border-2 border-gray-400 text-white hover:border-white hover:bg-white hover:bg-opacity-20 focus:border-white focus:bg-white focus:bg-opacity-20">Explore</a>
         </article>
       </header>
       <main>
-        <div class="more-info-small">
-          <h2>
+        <div class="lg:hidden block -mt-5 p-12 text-white text-center bg-gray-400 more-info-small">
+          <h2 class="text-[1.7rem] font-normal mb-4">
             Introducing the new auto<b><i>s</i>cientific</b> ReachingBot®
           </h2>
-          <p>
+          <p class="mb-4">
             Accelerating preclinical drug evaluation with robotics and
             artificial intelligence.
           </p>
-          <a href="#">Explore</a>
+          <a href="#" class="inline-block font-bold mt-2.5 py-2.5 px-5 no-underline transition-all duration-300 rounded-custom border-2 border-gray-400 text-white hover:border-white hover:bg-white hover:bg-opacity-20 focus:border-white focus:bg-white focus:bg-opacity-20">Explore</a>
         </div>
         <div class="mid-section">
-          <h3>Where you'll find a ReachingBot</h3>
-          <div class="client-logos tile bottom-right-fade"">
-          <img src="images/client-logos/champ-logo.png" alt="CHAMP Foundation" loading="lazy" />
-          <img src="images/client-logos/epfl-logo.png" alt="EPFL - École Polytechnique Fédérale de Lausanne" loading="lazy" />
-          <img src="images/client-logos/kcl-logo.svg" alt="King's College London" loading="lazy" />
-          <img src="images/client-logos/nr-logo.png" alt="Neuroscience Research" loading="lazy" />
-          <img src="images/client-logos/ohio-state-logo.jpeg" alt="The Ohio State University" loading="lazy" />
-          <img src="images/client-logos/oxford-uni-logo.png" alt="University of Oxford" loading="lazy" />
-          <img src="images/client-logos/ubc-logo.png" alt="University of British Columbia" loading="lazy" />
-          <img src="images/client-logos/udr-logo.png" alt="UDR Research" loading="lazy" />
-          <img src="images/client-logos/uni-of-edinburgh.png" alt="University of Edinburgh" loading="lazy" />
-          <img src="images/client-logos/tsukuba-logo.png" alt="University of Tsukuba" loading="lazy" />
+          <h3 class="text-center text-2xl font-normal mb-8">Where you'll find a ReachingBot</h3>
+          <div class="flex justify-evenly items-center p-4 flex-wrap mx-12 client-logos tile bottom-right-fade">
+          <img src="images/client-logos/champ-logo.png" alt="CHAMP Foundation" loading="lazy" class="w-[100px] grayscale-[90%] m-4" />
+          <img src="images/client-logos/epfl-logo.png" alt="EPFL - École Polytechnique Fédérale de Lausanne" loading="lazy" class="w-[100px] grayscale-[90%] m-4" />
+          <img src="images/client-logos/kcl-logo.svg" alt="King's College London" loading="lazy" class="w-[100px] grayscale-[90%] m-4" />
+          <img src="images/client-logos/nr-logo.png" alt="Neuroscience Research" loading="lazy" class="w-[100px] grayscale-[90%] m-4" />
+          <img src="images/client-logos/ohio-state-logo.jpeg" alt="The Ohio State University" loading="lazy" class="w-[100px] grayscale-[90%] m-4" />
+          <img src="images/client-logos/oxford-uni-logo.png" alt="University of Oxford" loading="lazy" class="w-[100px] grayscale-[90%] m-4" />
+          <img src="images/client-logos/ubc-logo.png" alt="University of British Columbia" loading="lazy" class="w-[100px] grayscale-[90%] m-4" />
+          <img src="images/client-logos/udr-logo.png" alt="UDR Research" loading="lazy" class="w-[100px] grayscale-[90%] m-4" />
+          <img src="images/client-logos/uni-of-edinburgh.png" alt="University of Edinburgh" loading="lazy" class="w-[100px] grayscale-[90%] m-4" />
+          <img src="images/client-logos/tsukuba-logo.png" alt="University of Tsukuba" loading="lazy" class="w-[100px] grayscale-[90%] m-4" />
         </div>
-        <h3>What our customers say</h3>
-        <div class="testimonials tile bottom-right-fade">
-          <article class="nick">
+        <h3 class="text-center text-2xl font-normal mb-8">What our customers say</h3>
+        <div class="flex justify-evenly flex-wrap mb-8 testimonials tile bottom-right-fade">
+          <article class="border border-gray-300 border-solid bg-white rounded-custom shadow-[0px_19px_40px_-10px_#d1d7fc] m-4 p-4 w-80 max-w-xs nick">
             <img
-              class="nick-img"
+              class="w-20 h-20 rounded-full object-cover mb-4 nick-img"
               src="images/Nicholas-James-BW.jpg"
               alt="Dr. Nicholas James"
               loading="lazy"
             />
             <div class="nick-content">
-              <h2>Dr. Nicholas James</h2>
-              <p>
+              <h2 class="text-[1.7rem] font-normal mb-4">Dr. Nicholas James</h2>
+              <p class="mb-4">
                 We have been using ReachingBots from auto<b
                   ><i>s</i>cientific</b
                 >
@@ -171,35 +173,35 @@
                 addition to the lab...
               </p>
             </div>
-            <a class="testimonials-more" href="#">
+            <a class="inline-flex items-center text-primary hover:underline testimonials-more" href="#">
               Read more
               <img
-                class="right-arrow"
+                class="ml-2 w-4 h-4 right-arrow"
                 src="images/arrow-small-right.svg"
                 alt="Read More"
               />
             </a>
           </article>
-          <article class="inssia">
+          <article class="border border-gray-300 border-solid bg-white rounded-custom shadow-[0px_19px_40px_-10px_#d1d7fc] m-4 p-4 w-80 max-w-xs inssia">
             <img
-              class="inssia-img"
+              class="w-20 h-20 rounded-full object-cover mb-4 inssia-img"
               src="images/Inssia-Dewany-BW.jpg"
               alt="Inssia Dewany"
               loading="lazy"
             />
             <div class="inssia-content">
-              <h2>Inssia Dewany</h2>
-              <p>
+              <h2 class="text-[1.7rem] font-normal mb-4">Inssia Dewany</h2>
+              <p class="mb-4">
                 I really enjoyed working closely with auto<b
                   ><i>s</i>cientific</b
                 >
                 to have ReachingBots customised to our specific needs...
               </p>
             </div>
-            <a class="testimonials-more" href="#">
+            <a class="inline-flex items-center text-primary hover:underline testimonials-more" href="#">
               Read more
               <img
-                class="right-arrow"
+                class="ml-2 w-4 h-4 right-arrow"
                 src="images/arrow-small-right.svg"
                 alt="Read More"
               />
@@ -207,15 +209,15 @@
           </article>
           </div>
           <div class="mid-section-contact-us">
-            <h3>Contact us</h3>
-            <form class="get-in-touch" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html">
+            <h3 class="text-center text-2xl font-normal mb-8">Contact us</h3>
+            <form class="border-2 border-gray-300 px-8 py-4 mx-[20%] my-5 mb-10 rounded-custom shadow-[0px_19px_40px_-10px_#d1d7fc] get-in-touch" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html">
               <!-- Honeypot field for spam protection -->
               <p style="display: none;">
                 <label>Don't fill this out if you're human: <input name="bot-field" /></label>
               </p>
               
-              <div class="form-group">
-                <label for="name">Name</label>
+              <div class="mb-4 form-group">
+                <label for="name" class="block font-bold text-primary mb-2">Name</label>
                 <input
                   id="name"
                   type="text"
@@ -223,10 +225,11 @@
                   name="name"
                   required
                   maxlength="50"
+                  class="w-4/5 p-2 rounded-custom border border-gray-400 shadow-[0px_19px_40px_-10px_#d1d7fc] transition-all duration-300 outline-none focus:outline-2 focus:outline-purple-600"
                 />
               </div>
-              <div class="form-group">
-                <label for="email-us">Email</label>
+              <div class="mb-4 form-group">
+                <label for="email-us" class="block font-bold text-primary mb-2">Email</label>
                 <input
                   id="email-us"
                   type="email"
@@ -234,33 +237,35 @@
                   placeholder="ada@lovelace.com"
                   required
                   maxlength="100"
+                  class="w-4/5 p-2 rounded-custom border border-gray-400 shadow-[0px_19px_40px_-10px_#d1d7fc] transition-all duration-300 outline-none focus:outline-2 focus:outline-purple-600"
                 />
               </div>
-              <div class="form-group">
-                <label for="message">Message</label>
+              <div class="mb-4 form-group">
+                <label for="message" class="block font-bold text-primary mb-2">Message</label>
                 <textarea
                   id="message"
                   placeholder="Tell us about your research"
                   name="message"
                   required
                   maxlength="500"
+                  class="w-full h-[100px] resize-none p-2 rounded-custom border border-gray-400 shadow-[0px_19px_40px_-10px_#d1d7fc] transition-all duration-300 outline-none focus:outline-2 focus:outline-purple-600"
                 ></textarea>
               </div>
-              <button type="submit">Send</button>
-              <button type="reset">Clear</button>
+              <button type="submit" class="bg-white rounded-custom border border-gray-400 shadow-[0px_19px_40px_-10px_#d1d7fc] text-primary mx-2 py-2 px-8 transition-all duration-300 hover:bg-primary hover:text-white focus:bg-primary focus:text-white hover:shadow-[0px_19px_40px_-200px_#d1d7fc] focus:shadow-[0px_19px_40px_-200px_#d1d7fc]">Send</button>
+              <button type="reset" class="bg-white rounded-custom border border-gray-400 shadow-[0px_19px_40px_-10px_#d1d7fc] text-primary mx-2 py-2 px-8 transition-all duration-300 hover:bg-primary hover:text-white focus:bg-primary focus:text-white hover:shadow-[0px_19px_40px_-200px_#d1d7fc] focus:shadow-[0px_19px_40px_-200px_#d1d7fc]">Clear</button>
             </form>
           </div>
         </div>
       </main>
-      <footer>
-        <div class="top-footer">
-          <div class="footer-content">
+      <footer class="flex flex-col">
+        <div class="border-t border-b border-gray-200 top-footer">
+          <div class="text-lg mx-[15%] grid grid-cols-2 grid-rows-2 footer-content">
             <div class="footer-box top-left">
-              <h3>Get in touch</h3>
+              <h3 class="text-2xl font-normal mb-4">Get in touch</h3>
               <p>&#9993;&#xFE0F; info@autoscientific.co.uk</p>
             </div>
             <div class="footer-box top-right">
-              <h3>Location</h3>
+              <h3 class="text-2xl font-normal mb-4">Location</h3>
               <p>
                 Registered Business Address (Accounting) - Bank House, 6 - 8
                 Church Street, Adlington, Chorley, Lancashire, PR7 4EX
@@ -268,28 +273,28 @@
               <p>Company Number - 13684067</p>
             </div>
             <div class="footer-box bottom-left">
-              <h3>Subscribe to our emails</h3>
+              <h3 class="text-2xl font-normal mb-4">Subscribe to our emails</h3>
               <form>
-                <input class="email-form" type="email" placeholder="Email" />
+                <input class="p-3 w-1/2 email-form" type="email" placeholder="Email" />
               </form>
             </div>
-            <div class="footer-box bottom-right">
-              <a href="http://instagram.com/autoscientific" aria-label="Follow autoscientific on Instagram"
-                ><img src="images/instagram.png" alt="autoscientific on Instagram" loading="lazy"
+            <div class="flex justify-end items-end footer-box bottom-right">
+              <a href="http://instagram.com/autoscientific" aria-label="Follow autoscientific on Instagram" class="mx-2"
+                ><img src="images/instagram.png" alt="autoscientific on Instagram" loading="lazy" class="w-6"
               /></a>
-              <a href="https://twitter.com/autoscientific" aria-label="Follow autoscientific on Twitter"
-                ><img src="images/twitter.png" alt="autoscientific on Twitter" loading="lazy"
+              <a href="https://twitter.com/autoscientific" aria-label="Follow autoscientific on Twitter" class="mx-2"
+                ><img src="images/twitter.png" alt="autoscientific on Twitter" loading="lazy" class="w-6"
               /></a>
-              <a href="https://www.linkedin.com/company/autoscientific/" aria-label="Connect with autoscientific on LinkedIn"
-                ><img src="images/linkedin.png" alt="autoscientific on LinkedIn" loading="lazy"
+              <a href="https://www.linkedin.com/company/autoscientific/" aria-label="Connect with autoscientific on LinkedIn" class="mx-2"
+                ><img src="images/linkedin.png" alt="autoscientific on LinkedIn" loading="lazy" class="w-6"
               /></a>
-              <a href="https://www.youtube.com/channel/UCRytk6ZP-jBdUdxl3W5wFcQ" aria-label="Subscribe to autoscientific on YouTube"
-                ><img src="images/youtube.png" alt="autoscientific on YouTube" loading="lazy"
+              <a href="https://www.youtube.com/channel/UCRytk6ZP-jBdUdxl3W5wFcQ" aria-label="Subscribe to autoscientific on YouTube" class="mx-2"
+                ><img src="images/youtube.png" alt="autoscientific on YouTube" loading="lazy" class="w-6"
               /></a>
             </div>
           </div>
         </div>
-        <div class="bottom-footer">
+        <div class="text-center py-12 font-light tracking-[2px] bottom-footer">
           <p>
             auto<b><i>s</i>cientific</b> 2024 &copy;
           </p>

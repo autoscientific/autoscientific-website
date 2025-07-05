@@ -7,7 +7,8 @@
     <meta name="description" content="Founded in 2021 by Dr. Sotiris Kakanos, autoscientific develops ReachingBot® for automated single pellet reaching tasks in neuroscience research. Trusted by leading universities worldwide." />
     <meta name="keywords" content="autoscientific, reachingbot, neuroscience automation, single pellet reaching, behavioral testing, Dr. Sotiris Kakanos, laboratory equipment" />
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tailwind-minimal.css" />
+    <link rel="stylesheet" href="css/custom.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -15,13 +16,13 @@
     <link rel="icon" type="image/x-icon" href="images/pattern.png" />
   </head>
   <body>
-    <div class="container">
-      <header class="header-non-home">
-        <div class="nav-bar-container collapsible">
-          <nav id="nav-bar-standard">
-            <div class="logo">
-              <a href="index.html">
-                <h2 class="animate__animated animate__pulse">
+    <div class="grid grid-rows-[auto_auto_300px] gap-y-2.5">
+      <header class="h-[25vh] bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-400 bg-cover bg-center bg-no-repeat flex flex-col justify-between relative header-non-home">
+        <div class="nav-bar-container collapsible w-full fixed z-[99999]">
+          <nav class="flex justify-between items-center transition-colors duration-200 px-4 pt-0 flex-wrap" id="nav-bar-standard">
+            <div class="mr-8 text-white logo">
+              <a href="index.html" class="text-white no-underline">
+                <h2 class="animate__animated animate__pulse font-light tracking-[2px] text-[1.7rem] font-normal">
                   auto<b><i>s</i>cientific</b>
                 </h2>
               </a>
@@ -30,20 +31,21 @@
               id="menu-toggle"
               src="images/burger-bar.svg"
               alt="Menu Toggle"
+              class="w-[30px] h-[30px] transition-all duration-300 invert cursor-pointer hover:scale-110 focus:scale-110"
             />
-            <ul class="list nav__list collapsible__content">
-              <li class="nav__item"><a href="index.html">Home</a></li>
-              <li class="nav__item"><a href="about.html">About</a></li>
-              <li class="nav__item">
-                <a href="index.html#reachingbot"
+            <ul class="list-none p-0 m-0 w-full nav__list collapsible__content max-h-0 overflow-hidden opacity-0 transition-all duration-200">
+              <li class="border-b border-gray-400 border-opacity-20 p-0.5 nav__item"><a href="index.html" class="text-white mx-1.5 no-underline hover:underline focus:underline">Home</a></li>
+              <li class="border-b border-gray-400 border-opacity-20 p-0.5 nav__item"><a href="about.html" class="text-white mx-1.5 no-underline hover:underline focus:underline">About</a></li>
+              <li class="border-b border-gray-400 border-opacity-20 p-0.5 nav__item">
+                <a href="index.html#reachingbot" class="text-white mx-1.5 no-underline hover:underline focus:underline"
                   >auto<b><i>s</i>cientific</b> ReachingBot ®</a
                 >
               </li>
             </ul>
           </nav>
 
-        <div class="about-header-content">
-          <p>Commercializing the ReachingBot for automated single pellet reaching tasks in mice</p>
+        <div class="text-center text-white p-8 mt-auto mb-12 relative z-[2] about-header-content">
+          <p class="text-xl font-light opacity-90 max-w-[600px] mx-auto">Commercializing the ReachingBot for automated single pellet reaching tasks in mice</p>
         </div>
       </header>
       
@@ -51,38 +53,38 @@
         <div class="about-content">
           
           <section class="company-overview">
-            <div class="content-section">
-              <h2>Our Story</h2>
-              <p>
+            <div class="max-w-4xl mx-auto px-8 py-8 content-section">
+              <h2 class="text-3xl font-normal mb-6 text-center">Our Story</h2>
+              <p class="mb-6 text-lg leading-relaxed">
                 Founded in 2021 by Dr. Sotiris Kakanos, auto<b><i>s</i>cientific</b> was created with a single, focused mission: to commercialize the ReachingBot, an innovative lab instrument that automates the single pellet reaching task in mice.
               </p>
-              <p>
+              <p class="mb-6 text-lg leading-relaxed">
                 The single pellet reaching task is a widely used behavioral assessment in neuroscience research, traditionally requiring manual operation and extensive researcher time. Our ReachingBot transforms this process through precision automation, delivering consistent, reliable results while freeing researchers to focus on their scientific discoveries.
               </p>
             </div>
           </section>
           
-          <section class="mission-focus">
-            <div class="content-section">
-              <h2>Our Focus</h2>
-              <div class="mission-grid">
-                <div class="mission-item">
-                  <h3>Specialized Innovation</h3>
-                  <p>
+          <section class="bg-gray-50 py-12 mission-focus">
+            <div class="max-w-4xl mx-auto px-8 content-section">
+              <h2 class="text-3xl font-normal mb-8 text-center">Our Focus</h2>
+              <div class="grid md:grid-cols-3 gap-8 mission-grid">
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm mission-item">
+                  <h3 class="text-xl font-semibold mb-4 text-primary">Specialized Innovation</h3>
+                  <p class="text-gray-700">
                     We focus on developing one exceptional product rather than many. This concentrated approach allows us to perfect every detail and deliver unmatched quality in laboratory automation.
                   </p>
                 </div>
                 
-                <div class="mission-item">
-                  <h3>Research Partnership</h3>
-                  <p>
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm mission-item">
+                  <h3 class="text-xl font-semibold mb-4 text-primary">Research Partnership</h3>
+                  <p class="text-gray-700">
                     Working closely with neuroscience researchers, we understand the precise needs of behavioral testing and create solutions that integrate seamlessly into existing workflows.
                   </p>
                 </div>
                 
-                <div class="mission-item">
-                  <h3>Scientific Rigor</h3>
-                  <p>
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm mission-item">
+                  <h3 class="text-xl font-semibold mb-4 text-primary">Scientific Rigor</h3>
+                  <p class="text-gray-700">
                     Every aspect of our instrument is designed with scientific precision in mind, ensuring reproducible results that researchers can trust for their critical studies.
                   </p>
                 </div>
@@ -90,43 +92,43 @@
             </div>
           </section>
           
-          <section class="credentials">
-            <div class="content-section">
-              <h2>Our Credentials</h2>
-              <div class="credentials-grid">
-                <div class="credential-item">
-                  <div class="credential-logo">
+          <section class="py-12 credentials">
+            <div class="max-w-4xl mx-auto px-8 content-section">
+              <h2 class="text-3xl font-normal mb-8 text-center">Our Credentials</h2>
+              <div class="grid md:grid-cols-2 gap-8 credentials-grid">
+                <div class="flex items-center p-6 bg-white rounded-lg shadow-sm credential-item">
+                  <div class="mr-6 credential-logo">
                     <!-- NVIDIA Inception logo would go here -->
-                    <div class="logo-placeholder nvidia">NVIDIA<br>Inception<br>Member</div>
+                    <div class="w-20 h-20 bg-green-100 rounded-lg flex items-center justify-center text-xs text-center font-bold text-green-800 logo-placeholder nvidia">NVIDIA<br>Inception<br>Member</div>
                   </div>
                   <div class="credential-content">
-                    <h3>NVIDIA Inception Program</h3>
-                    <p>Proud member of the NVIDIA Inception Program, supporting our AI and robotics innovations.</p>
+                    <h3 class="text-lg font-semibold mb-2">NVIDIA Inception Program</h3>
+                    <p class="text-gray-600">Proud member of the NVIDIA Inception Program, supporting our AI and robotics innovations.</p>
                   </div>
                 </div>
                 
-                <div class="credential-item">
-                  <div class="credential-logo">
+                <div class="flex items-center p-6 bg-white rounded-lg shadow-sm credential-item">
+                  <div class="mr-6 credential-logo">
                     <!-- SolidWorks logo would go here -->
-                    <div class="logo-placeholder solidworks">SolidWorks<br>Sponsored<br>Company</div>
+                    <div class="w-20 h-20 bg-blue-100 rounded-lg flex items-center justify-center text-xs text-center font-bold text-blue-800 logo-placeholder solidworks">SolidWorks<br>Sponsored<br>Company</div>
                   </div>
                   <div class="credential-content">
-                    <h3>SolidWorks Sponsored Company</h3>
-                    <p>Officially sponsored by SolidWorks for our engineering and design capabilities.</p>
+                    <h3 class="text-lg font-semibold mb-2">SolidWorks Sponsored Company</h3>
+                    <p class="text-gray-600">Officially sponsored by SolidWorks for our engineering and design capabilities.</p>
                   </div>
                 </div>
               </div>
             </div>
           </section>
           
-          <section class="founder-section">
-            <div class="content-section">
-              <h2>Our Founder</h2>
+          <section class="bg-gray-50 py-12 founder-section">
+            <div class="max-w-4xl mx-auto px-8 content-section">
+              <h2 class="text-3xl font-normal mb-8 text-center">Our Founder</h2>
               <div class="founder-info">
                 <div class="founder-content">
-                  <h3>Dr. Sotiris Kakanos</h3>
-                  <p class="founder-title">Founder & CEO</p>
-                  <p>
+                  <h3 class="text-2xl font-semibold mb-2 text-primary">Dr. Sotiris Kakanos</h3>
+                  <p class="text-lg text-gray-600 mb-4 founder-title">Founder & CEO</p>
+                  <p class="text-lg leading-relaxed text-gray-700">
                     Dr. Sotiris Kakanos founded auto<b><i>s</i>cientific</b> in 2021 to bring the ReachingBot technology to market. Recognizing the need for automation in neuroscience behavioral testing, Dr. Kakanos developed this specialized instrument to address the time-intensive and variable nature of manual single pellet reaching tasks. His vision was to create a product that would enhance research reproducibility while allowing scientists to focus on what they do best: scientific discovery.
                   </p>
                 </div>
@@ -134,25 +136,25 @@
             </div>
           </section>
           
-          <section class="company-details">
-            <div class="content-section">
-              <h2>Company Information</h2>
-              <div class="company-info-grid">
-                <div class="info-item">
-                  <h3>Founded</h3>
-                  <p>2021</p>
+          <section class="py-12 company-details">
+            <div class="max-w-4xl mx-auto px-8 content-section">
+              <h2 class="text-3xl font-normal mb-8 text-center">Company Information</h2>
+              <div class="grid md:grid-cols-2 gap-8 company-info-grid">
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm info-item">
+                  <h3 class="text-xl font-semibold mb-2 text-primary">Founded</h3>
+                  <p class="text-gray-700">2021</p>
                 </div>
-                <div class="info-item">
-                  <h3>Company Number</h3>
-                  <p>13684067</p>
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm info-item">
+                  <h3 class="text-xl font-semibold mb-2 text-primary">Company Number</h3>
+                  <p class="text-gray-700">13684067</p>
                 </div>
-                <div class="info-item">
-                  <h3>Registered Address</h3>
-                  <p>Bank House, 6 - 8 Church Street<br>Adlington, Chorley<br>Lancashire, PR7 4EX</p>
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm info-item">
+                  <h3 class="text-xl font-semibold mb-2 text-primary">Registered Address</h3>
+                  <p class="text-gray-700">Bank House, 6 - 8 Church Street<br>Adlington, Chorley<br>Lancashire, PR7 4EX</p>
                 </div>
-                <div class="info-item">
-                  <h3>Contact</h3>
-                  <p>info@autoscientific.co.uk</p>
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm info-item">
+                  <h3 class="text-xl font-semibold mb-2 text-primary">Contact</h3>
+                  <p class="text-gray-700">info@autoscientific.co.uk</p>
                 </div>
               </div>
             </div>
@@ -160,15 +162,15 @@
         </div>
       </main>
       
-      <footer>
-        <div class="top-footer">
-          <div class="footer-content">
+      <footer class="flex flex-col">
+        <div class="border-t border-b border-gray-200 top-footer">
+          <div class="text-lg mx-[15%] grid grid-cols-2 grid-rows-2 footer-content">
             <div class="footer-box top-left">
-              <h3>Get in touch</h3>
+              <h3 class="text-2xl font-normal mb-4">Get in touch</h3>
               <p>&#9993;&#xFE0F; info@autoscientific.co.uk</p>
             </div>
             <div class="footer-box top-right">
-              <h3>Location</h3>
+              <h3 class="text-2xl font-normal mb-4">Location</h3>
               <p>
                 Registered Business Address (Accounting) - Bank House, 6 - 8
                 Church Street, Adlington, Chorley, Lancashire, PR7 4EX
@@ -176,28 +178,28 @@
               <p>Company Number - 13684067</p>
             </div>
             <div class="footer-box bottom-left">
-              <h3>Subscribe to our emails</h3>
+              <h3 class="text-2xl font-normal mb-4">Subscribe to our emails</h3>
               <form>
-                <input class="email-form" type="email" placeholder="Email" />
+                <input class="p-3 w-1/2 email-form" type="email" placeholder="Email" />
               </form>
             </div>
-            <div class="footer-box bottom-right">
-              <a href="http://instagram.com/autoscientific" aria-label="Follow autoscientific on Instagram"
-                ><img src="images/instagram.png" alt="autoscientific on Instagram" loading="lazy"
+            <div class="flex justify-end items-end footer-box bottom-right">
+              <a href="http://instagram.com/autoscientific" aria-label="Follow autoscientific on Instagram" class="mx-2"
+                ><img src="images/instagram.png" alt="autoscientific on Instagram" loading="lazy" class="w-6"
               /></a>
-              <a href="https://twitter.com/autoscientific" aria-label="Follow autoscientific on Twitter"
-                ><img src="images/twitter.png" alt="autoscientific on Twitter" loading="lazy"
+              <a href="https://twitter.com/autoscientific" aria-label="Follow autoscientific on Twitter" class="mx-2"
+                ><img src="images/twitter.png" alt="autoscientific on Twitter" loading="lazy" class="w-6"
               /></a>
-              <a href="https://www.linkedin.com/company/autoscientific/" aria-label="Connect with autoscientific on LinkedIn"
-                ><img src="images/linkedin.png" alt="autoscientific on LinkedIn" loading="lazy"
+              <a href="https://www.linkedin.com/company/autoscientific/" aria-label="Connect with autoscientific on LinkedIn" class="mx-2"
+                ><img src="images/linkedin.png" alt="autoscientific on LinkedIn" loading="lazy" class="w-6"
               /></a>
-              <a href="https://www.youtube.com/channel/UCRytk6ZP-jBdUdxl3W5wFcQ" aria-label="Subscribe to autoscientific on YouTube"
-                ><img src="images/youtube.png" alt="autoscientific on YouTube" loading="lazy"
+              <a href="https://www.youtube.com/channel/UCRytk6ZP-jBdUdxl3W5wFcQ" aria-label="Subscribe to autoscientific on YouTube" class="mx-2"
+                ><img src="images/youtube.png" alt="autoscientific on YouTube" loading="lazy" class="w-6"
               /></a>
             </div>
           </div>
         </div>
-        <div class="bottom-footer">
+        <div class="text-center py-12 font-light tracking-[2px] bottom-footer">
           <p>
             auto<b><i>s</i>cientific</b> 2024 &copy;
           </p>

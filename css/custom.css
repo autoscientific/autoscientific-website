@@ -1,0 +1,43 @@
+/* Custom CSS for interactive components that work with JavaScript */
+
+/* Collapsible menu functionality */
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh !important;
+  opacity: 1 !important;
+}
+
+.collapsible--expanded #menu-toggle {
+  transform: scale(0.9, 1.5);
+}
+
+/* Animation classes for fade-in effects */
+.tile {
+  transform: translateY(50px) rotate(-5deg) translateZ(0);
+  transition: all 0.4s ease;
+  transition-delay: 0.3s;
+  opacity: 0;
+}
+
+.bottom-right-fade.inView {
+  transform: translateY(0) rotate(0deg) translateZ(0);
+  opacity: 1;
+}
+
+/* Ensure background pattern for non-home header */
+.header-non-home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.01) 2px,
+      rgba(255, 255, 255, 0.01) 4px
+    );
+  pointer-events: none;
+}

@@ -7,22 +7,22 @@
     <meta name="description" content="Thank you for contacting autoscientific. We'll get back to you about ReachingBot® and neuroscience automation solutions." />
     <meta name="robots" content="noindex, nofollow" />
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tailwind-minimal.css" />
+    <link rel="stylesheet" href="css/custom.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link rel="icon" type="image/x-icon" href="images/pattern.png" />
-    <meta http-equiv="refresh" content="5;url=/" />
   </head>
   <body>
-    <div class="container">
-      <header class="header-non-home">
-        <div class="nav-bar-container collapsible">
-          <nav id="nav-bar-standard">
-            <div class="logo">
-              <a href="/">
-                <h2 class="animate__animated animate__pulse">
+    <div class="grid grid-rows-[auto_auto_300px] gap-y-2.5">
+      <header class="h-[25vh] bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-400 bg-cover bg-center bg-no-repeat flex flex-col justify-between relative header-non-home">
+        <div class="nav-bar-container collapsible w-full fixed z-[99999]">
+          <nav class="flex justify-between items-center transition-colors duration-200 px-4 pt-0 flex-wrap" id="nav-bar-standard">
+            <div class="mr-8 text-white logo">
+              <a href="/" class="text-white no-underline">
+                <h2 class="animate__animated animate__pulse font-light tracking-[2px] text-[1.7rem] font-normal">
                   auto<b><i>s</i>cientific</b>
                 </h2>
               </a>
@@ -31,12 +31,13 @@
               id="menu-toggle"
               src="images/burger-bar.svg"
               alt="Menu Toggle"
+              class="w-[30px] h-[30px] transition-all duration-300 invert cursor-pointer hover:scale-110 focus:scale-110"
             />
-            <ul class="list nav__list collapsible__content">
-              <li class="nav__item"><a href="/">Home</a></li>
-              <li class="nav__item"><a href="about.html">About</a></li>
-              <li class="nav__item">
-                <a href="/"
+            <ul class="list-none p-0 m-0 w-full nav__list collapsible__content max-h-0 overflow-hidden opacity-0 transition-all duration-200">
+              <li class="border-b border-gray-400 border-opacity-20 p-0.5 nav__item"><a href="/" class="text-white mx-1.5 no-underline hover:underline focus:underline">Home</a></li>
+              <li class="border-b border-gray-400 border-opacity-20 p-0.5 nav__item"><a href="about.html" class="text-white mx-1.5 no-underline hover:underline focus:underline">About</a></li>
+              <li class="border-b border-gray-400 border-opacity-20 p-0.5 nav__item">
+                <a href="/" class="text-white mx-1.5 no-underline hover:underline focus:underline"
                   >auto<b><i>s</i>cientific</b> ReachingBot ®</a
                 >
               </li>
@@ -45,60 +46,43 @@
         </div>
       </header>
       
-      <main style="padding: 4rem 2rem; text-align: center; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <div class="thank-you-content" style="max-width: 600px;">
-          <h1 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 1rem;">
+      <main class="py-16 px-8 text-center min-h-[60vh] flex flex-col justify-center items-center">
+        <div class="max-w-[600px] thank-you-content">
+          <h1 class="text-primary text-5xl mb-4">
             Thank You!
           </h1>
-          <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.6;">
+          <p class="text-xl mb-8 leading-relaxed">
             Your message has been successfully sent to our team. We appreciate your interest in 
             auto<b><i>s</i>cientific</b> and will get back to you as soon as possible.
           </p>
-          <div style="background: var(--tertiary-color); padding: 2rem; border-radius: var(--border-radius); margin-bottom: 2rem;">
-            <h3 style="color: var(--primary-color); margin-top: 0;">What happens next?</h3>
-            <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
-              <li style="margin-bottom: 0.5rem;">Our team will review your inquiry</li>
-              <li style="margin-bottom: 0.5rem;">We'll respond within 24-48 hours</li>
-              <li style="margin-bottom: 0.5rem;">For urgent matters, call us directly</li>
+          <div class="bg-tertiary p-8 rounded-custom mb-8">
+            <h3 class="text-primary mt-0 text-xl font-semibold mb-4">What happens next?</h3>
+            <ul class="text-left max-w-[400px] mx-auto list-disc list-inside space-y-2">
+              <li>Our team will review your inquiry</li>
+              <li>We'll respond within 24-48 hours</li>
+              <li>For urgent matters, call us directly</li>
             </ul>
           </div>
-          <p style="margin-bottom: 2rem;">
+          <p class="mb-8">
             <strong>Email:</strong> info@autoscientific.co.uk<br>
             <strong>Note:</strong> You'll be redirected to the homepage in 5 seconds.
           </p>
-          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="/" style="
-              background: var(--primary-color);
-              color: white;
-              padding: 12px 24px;
-              border-radius: var(--border-radius);
-              text-decoration: none;
-              font-weight: bold;
-              transition: all 0.3s ease;
-            ">Return to Homepage</a>
-            <a href="about.html" style="
-              background: white;
-              color: var(--primary-color);
-              padding: 12px 24px;
-              border: 2px solid var(--primary-color);
-              border-radius: var(--border-radius);
-              text-decoration: none;
-              font-weight: bold;
-              transition: all 0.3s ease;
-            ">Learn More About Us</a>
+          <div class="flex gap-4 justify-center flex-wrap">
+            <a href="/" class="bg-primary text-white py-3 px-6 rounded-custom no-underline font-bold transition-all duration-300 ease-in-out hover:bg-opacity-90">Return to Homepage</a>
+            <a href="about.html" class="bg-white text-primary py-3 px-6 border-2 border-primary rounded-custom no-underline font-bold transition-all duration-300 ease-in-out hover:bg-primary hover:text-white">Learn More About Us</a>
           </div>
         </div>
       </main>
       
-      <footer>
-        <div class="top-footer">
-          <div class="footer-content">
+      <footer class="flex flex-col">
+        <div class="border-t border-b border-gray-200 top-footer">
+          <div class="text-lg mx-[15%] grid grid-cols-2 grid-rows-2 footer-content">
             <div class="footer-box top-left">
-              <h3>Get in touch</h3>
+              <h3 class="text-2xl font-normal mb-4">Get in touch</h3>
               <p>&#9993;&#xFE0F; info@autoscientific.co.uk</p>
             </div>
             <div class="footer-box top-right">
-              <h3>Location</h3>
+              <h3 class="text-2xl font-normal mb-4">Location</h3>
               <p>
                 Registered Business Address (Accounting) - Bank House, 6 - 8
                 Church Street, Adlington, Chorley, Lancashire, PR7 4EX
@@ -106,28 +90,28 @@
               <p>Company Number - 13684067</p>
             </div>
             <div class="footer-box bottom-left">
-              <h3>Subscribe to our emails</h3>
+              <h3 class="text-2xl font-normal mb-4">Subscribe to our emails</h3>
               <form>
-                <input class="email-form" type="email" placeholder="Email" />
+                <input class="p-3 w-1/2 email-form" type="email" placeholder="Email" />
               </form>
             </div>
-            <div class="footer-box bottom-right">
-              <a href="http://instagram.com/autoscientific" aria-label="Follow autoscientific on Instagram"
-                ><img src="images/instagram.png" alt="autoscientific on Instagram" loading="lazy"
+            <div class="flex justify-end items-end footer-box bottom-right">
+              <a href="http://instagram.com/autoscientific" aria-label="Follow autoscientific on Instagram" class="mx-2"
+                ><img src="images/instagram.png" alt="autoscientific on Instagram" loading="lazy" class="w-6"
               /></a>
-              <a href="https://twitter.com/autoscientific" aria-label="Follow autoscientific on Twitter"
-                ><img src="images/twitter.png" alt="autoscientific on Twitter" loading="lazy"
+              <a href="https://twitter.com/autoscientific" aria-label="Follow autoscientific on Twitter" class="mx-2"
+                ><img src="images/twitter.png" alt="autoscientific on Twitter" loading="lazy" class="w-6"
               /></a>
-              <a href="https://www.linkedin.com/company/autoscientific/" aria-label="Connect with autoscientific on LinkedIn"
-                ><img src="images/linkedin.png" alt="autoscientific on LinkedIn" loading="lazy"
+              <a href="https://www.linkedin.com/company/autoscientific/" aria-label="Connect with autoscientific on LinkedIn" class="mx-2"
+                ><img src="images/linkedin.png" alt="autoscientific on LinkedIn" loading="lazy" class="w-6"
               /></a>
-              <a href="https://www.youtube.com/channel/UCRytk6ZP-jBdUdxl3W5wFcQ" aria-label="Subscribe to autoscientific on YouTube"
-                ><img src="images/youtube.png" alt="autoscientific on YouTube" loading="lazy"
+              <a href="https://www.youtube.com/channel/UCRytk6ZP-jBdUdxl3W5wFcQ" aria-label="Subscribe to autoscientific on YouTube" class="mx-2"
+                ><img src="images/youtube.png" alt="autoscientific on YouTube" loading="lazy" class="w-6"
               /></a>
             </div>
           </div>
         </div>
-        <div class="bottom-footer">
+        <div class="text-center py-12 font-light tracking-[2px] bottom-footer">
           <p>
             auto<b><i>s</i>cientific</b> 2024 &copy;
           </p>
