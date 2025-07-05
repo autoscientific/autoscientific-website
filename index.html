@@ -36,7 +36,7 @@
   </head>
   <body>
     <div class="container">
-      <header>
+      <header class="header-home">
         <div class="nav-bar-container collapsible">
           <nav id="nav-bar-standard">
             <div class="logo">
@@ -53,7 +53,7 @@
             />
             <ul class="list nav__list collapsible__content">
               <li class="nav__item"><a href="#">Home</a></li>
-              <li class="nav__item"><a href="#">About</a></li>
+              <li class="nav__item"><a href="about.html">About</a></li>
               <li class="nav__item">
                 <a href="#"
                   >auto<b><i>s</i>cientific</b> ReachingBot ®</a
@@ -62,7 +62,7 @@
             </ul>
           </nav>
         </div>
-        <article class="more-info tile bottom-right-fade">
+        <article class="more-info">
           <h2>
             Introducing the new auto<b><i>s</i>cientific</b> ReachingBot®
           </h2>
@@ -149,45 +149,51 @@
               />
             </a>
           </article>
-        </div>
-        <div class="mid-section-contact-us">
-          <h3>Contact us</h3>
-          <form class="get-in-touch" action="#" method="POST">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input
-                id="name"
-                type="text"
-                placeholder="Ada Lovelace"
-                name="name"
-                required
-                maxlength="50"
-              />
-            </div>
-            <div class="form-group">
-              <label for="email-us">Email</label>
-              <input
-                id="email-us"
-                type="email"
-                name="email"
-                placeholder="ada@lovelace.com"
-                required
-                maxlength="100"
-              />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                placeholder="Tell us about your research"
-                name="message"
-                required
-                maxlength="500"
-              ></textarea>
-            </div>
-            <button type="submit">Send</button>
-            <button type="reset">Clear</button>
-          </form>
+          </div>
+          <div class="mid-section-contact-us">
+            <h3>Contact us</h3>
+            <form class="get-in-touch" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html">
+              <!-- Honeypot field for spam protection -->
+              <p style="display: none;">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+              </p>
+              
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Ada Lovelace"
+                  name="name"
+                  required
+                  maxlength="50"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email-us">Email</label>
+                <input
+                  id="email-us"
+                  type="email"
+                  name="email"
+                  placeholder="ada@lovelace.com"
+                  required
+                  maxlength="100"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  placeholder="Tell us about your research"
+                  name="message"
+                  required
+                  maxlength="500"
+                ></textarea>
+              </div>
+              <button type="submit">Send</button>
+              <button type="reset">Clear</button>
+            </form>
+          </div>
         </div>
       </main>
       <footer>
@@ -237,5 +243,6 @@
     <script src="js/scroll-color-change.js"></script>
     <script src="js/menu-toggle.js"></script>
     <script src="js/fade-in-logos.js"></script>
+    <script src="js/contact-form.js"></script>
   </body>
 </html>
