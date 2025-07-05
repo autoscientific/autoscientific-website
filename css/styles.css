@@ -43,6 +43,33 @@ h2 {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* About Header Content */
+.about-header-content {
+  text-align: center;
+  color: var(--secondary-color);
+  padding: 2rem;
+  margin-top: auto;
+  margin-bottom: 3rem;
+}
+
+.about-header-content h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.about-header-content p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Navigation Styles */
@@ -419,6 +446,365 @@ footer {
   width: 100%;
 }
 
+/* About Page Styles */
+.about-main {
+  padding: 0;
+  min-height: 60vh;
+  background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.content-section {
+  margin-bottom: 6rem;
+  position: relative;
+}
+
+.content-section::before {
+  content: '';
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e5e5e5, transparent);
+}
+
+.content-section:first-child::before {
+  display: none;
+}
+
+.content-section h2 {
+  color: #1a1a1a;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.content-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #333;
+}
+
+.content-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #4a4a4a;
+  font-weight: 300;
+}
+
+/* Mission Grid */
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.mission-item {
+  padding: 2.5rem 2rem;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.mission-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,.01) 2px,
+      rgba(0,0,0,.01) 4px
+    );
+  pointer-events: none;
+}
+
+.mission-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: #e0e0e0;
+}
+
+.mission-item h3 {
+  color: #1a1a1a;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.mission-item p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Product Focus Section */
+.product-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.product-image {
+  text-align: center;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-details h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-benefits {
+  margin-top: 2rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--tertiary-color);
+  border-radius: var(--border-radius);
+}
+
+.benefit-icon {
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.benefit-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.benefit-content h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.benefit-content p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Credentials Grid */
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.credential-item {
+  display: flex;
+  align-items: center;
+  padding: 2.5rem 2rem;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.credential-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 3px,
+      rgba(0,0,0,.005) 3px,
+      rgba(0,0,0,.005) 6px
+    );
+  pointer-events: none;
+}
+
+.credential-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+  border-color: #e0e0e0;
+}
+
+.credential-logo {
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+
+.logo-placeholder {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #666;
+  border: 2px solid #f0f0f0;
+  background: #fafafa;
+  letter-spacing: 0.5px;
+}
+
+.credential-content h3 {
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.credential-content p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Founder Section */
+.founder-info {
+  padding: 3rem 2.5rem;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.founder-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 4px,
+      rgba(0,0,0,.003) 4px,
+      rgba(0,0,0,.003) 8px
+    );
+  pointer-events: none;
+}
+
+.founder-content h3 {
+  color: #1a1a1a;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.founder-title {
+  color: #888;
+  font-style: italic;
+  margin-bottom: 2rem !important;
+  font-size: 0.95rem !important;
+  font-weight: 300;
+}
+
+/* Company Info Grid */
+.company-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.info-item {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.info-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,.008) 2px,
+      rgba(0,0,0,.008) 4px
+    );
+  pointer-events: none;
+}
+
+.info-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border-color: #e0e0e0;
+}
+
+.info-item h3 {
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.info-item p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
 /* Media Queries */
 @media screen and (min-width: 938px) {
   #menu-toggle {
@@ -501,5 +887,66 @@ footer {
 
   .get-in-touch {
     margin: 20px 5%;
+  }
+  
+  /* About Page Mobile Styles */
+  .about-content {
+    padding: 2rem 1rem;
+  }
+  
+  .about-header-content {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-header-content h1 {
+    font-size: 2rem;
+  }
+  
+  .about-header-content p {
+    font-size: 1rem;
+  }
+  
+  .content-section {
+    margin-bottom: 4rem;
+  }
+  
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .mission-item {
+    padding: 2rem 1.5rem;
+  }
+  
+  .credentials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .credential-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  
+  .credential-logo {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .founder-info {
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  
+  .company-info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .info-item {
+    padding: 1.5rem 1rem;
   }
 }
