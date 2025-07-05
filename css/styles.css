@@ -37,8 +37,7 @@ h2 {
 
 /* Header Styles Non-home*/
 .header-non-home {
-  height: 50vh;
-  background: rgb(2,0,36);
+  height: 25vh;
   background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,74,1) 31%, rgba(0,212,255,1) 100%); 
   background-size: cover;
   background-position: 50% 50%;
@@ -46,6 +45,25 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+}
+
+.header-non-home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.01) 2px,
+      rgba(255, 255, 255, 0.01) 4px
+    );
+  pointer-events: none;
 }
 
 /* About Header Content */
@@ -55,6 +73,8 @@ h2 {
   padding: 2rem;
   margin-top: auto;
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
 }
 
 .about-header-content h1 {
@@ -944,9 +964,5 @@ footer {
   .company-info-grid {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1.5rem;
-  }
-  
-  .info-item {
-    padding: 1.5rem 1rem;
   }
 }

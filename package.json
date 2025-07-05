@@ -1,13 +1,24 @@
 {
   "name": "autoscientific-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Static website for autoscientific - ReachingBot for automated single pellet reaching tasks",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel serve index.html --port 1234 --open",
+    "dev:all": "parcel serve index.html about.html thank-you.html --port 1234 --open",
+    "build": "parcel build index.html about.html thank-you.html --public-url ./",
+    "clean": "rm -rf dist .cache",
+    "start": "npm run dev",
+    "test": "echo \"No tests configured\" && exit 0"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "neuroscience",
+    "automation",
+    "preclinical",
+    "laboratory",
+    "reachingbot"
+  ],
+  "author": "autoscientific",
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
