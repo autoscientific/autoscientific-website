@@ -130,7 +130,12 @@
           </div>
           <div class="mid-section-contact-us">
             <h3>Contact us</h3>
-            <form class="get-in-touch" action="#" method="POST">
+            <form class="get-in-touch" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html">
+              <!-- Honeypot field for spam protection -->
+              <p style="display: none;">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+              </p>
+              
               <div class="form-group">
                 <label for="name">Name</label>
                 <input
@@ -216,5 +221,6 @@
     <script src="js/scroll-color-change.js"></script>
     <script src="js/menu-toggle.js"></script>
     <script src="js/fade-in-logos.js"></script>
+    <script src="js/contact-form.js"></script>
   </body>
 </html>
